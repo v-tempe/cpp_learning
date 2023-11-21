@@ -4,9 +4,6 @@
 using namespace std;
 
 
-float R = 0;
-
-
 double input(string prompt = "")
 {
 	double value;
