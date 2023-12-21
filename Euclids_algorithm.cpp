@@ -9,9 +9,16 @@ int nod(int a, int b) {
         b = a - b;
         a = a - b;
     }
-    while ((a != 0) (b != 0)) {
-
+    while ((a != 0) && (b != 0)) {
+        if (a > b) {
+            a = a % b;
+        }
+        else {
+            b = b % a;
+        }
     }
+
+    return a + b;  // одно из них всё равно равно нулю
 }
 
 
@@ -33,7 +40,8 @@ int main()
 {
     cin >> a;
     cin >> b;
-    cout << gcd(a, b);
+    cout << gcd(a, b) << endl;
+    cout << nod(a, b) << endl;
 
     return 0;
 }
